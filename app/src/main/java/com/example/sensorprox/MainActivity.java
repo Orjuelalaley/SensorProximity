@@ -48,8 +48,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             Map<String, Object> sensorValues = new HashMap<>();
             if (Proximity <= 3) {
                 sensorValues.put("estado", 1);
+                //toast
             } else {
                 sensorValues.put("estado", 0);
+                //toast
             }
             sensorsRef.updateChildren(sensorValues);
         }
