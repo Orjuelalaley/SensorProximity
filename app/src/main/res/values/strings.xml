@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">sensorProx</string>
+    <string name="info">SIMULACIÓN DE UN SENSOR DE MOVIMIENTO</string>
+</resources>
