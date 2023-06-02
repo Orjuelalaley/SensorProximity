@@ -5,6 +5,7 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -48,10 +49,10 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
             Map<String, Object> sensorValues = new HashMap<>();
             if (Proximity <= 3) {
                 sensorValues.put("estado", 1);
-                //toast
+                Toast.makeText(this, "Actividad sospechosa", Toast.LENGTH_SHORT).show();
             } else {
                 sensorValues.put("estado", 0);
-                //toast
+                Toast.makeText(this, "No hay actividad sospechosa", Toast.LENGTH_SHORT).show();
             }
             sensorsRef.updateChildren(sensorValues);
         }
